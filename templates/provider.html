@@ -1,0 +1,54 @@
+<!-- client-home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book-ESI</title>
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='assets/logo.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/provider.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+</head>
+
+<body>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+
+    <div class="box-form">
+        <div class="left">
+            <!-- Include provider information here -->
+            <div class="overlay">
+                <img src="{{ url_for('static', filename='assets/provider_avatar.png') }}" width="100" alt="provider-avatar">
+                <h2>Provider : Zoro</h2>
+                <br><br>
+                <p>Selected Service: Haircut</p>
+                <p>Location: Ouarzazate</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="calendar">
+                <h5>Availability</h5>
+                <iframe src="https://calendar.google.com/calendar/embed?src=aa9a45f9b13c759d61e2946a86b772a34d453a7bf59f487f516e92c611c31f54@group.calendar.google.com" style="border: 1;" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>             
+                <button type="submit">Create</button>
+            </div> 
+          
+        </div>
+    </div>
+</body>
+
+</html>

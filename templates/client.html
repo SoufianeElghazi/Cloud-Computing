@@ -1,0 +1,95 @@
+<!-- client-home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book-ESI</title>
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='assets/logo.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/client.css') }}">
+    
+
+</head>
+
+<body>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+
+    <div class="box-form">
+        <div class="left">
+            <!-- Include provider information here -->
+            <div class="overlay">
+                <img src="{{ url_for('static', filename='assets/client_avatar.svg') }}" width="100" alt="provider-avatar">
+                <h2>Client : {{client_username}}</h2>
+                <p>Selected Service: Haircut</p>
+                <p>Location: Ouarzazate</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="availability-calendar">
+                <h5>Availability</h5>
+                <!-- Availability Calendar Section -->
+                <div class="calendrier">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=aa9a45f9b13c759d61e2946a86b772a34d453a7bf59f487f516e92c611c31f54@group.calendar.google.com" style="border: 1;" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
+                </div>
+                
+            </div>
+            <div class="available-times">
+                <h5>Available Times</h5>
+                <!-- List of Available Times Section -->
+                <ul>
+                    <li>9:00 PM</li>
+                    <li>10:00 PM</li>
+                    <li>11:00 PM</li>
+                    <li>12:00 PM</li>
+                    <li>14:00 AM</li>
+                    <li>15:00 AM</li>
+                    <li>16:00 AM</li>
+                    <li>17:00 AM</li>
+                </ul>
+                <form action="https://google.achrafsani.xyz/create_event" method="get">
+                    <label for="datePicker">Select a Date:</label>
+                    <input type="date" id="datePicker" name="selectedDate" required>
+                    
+                    <label for="timePicker">Select a Time:</label>
+                    <input type="time" id="timePicker" name="selectedTime" required min="09:00" max="17:00" step="3600">
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                    <!-- The Book button triggers the form submission -->                   
+                    <div class="spacer"></div>
+                    <button type="submit">Book</button>
+                </form>
+
+                <!-- Add a section for displaying messages -->
+                <div class="message">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class="flashes">
+                                {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

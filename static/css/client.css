@@ -1,0 +1,222 @@
+body {
+    background-image: linear-gradient(135deg,#cccccc 10%,  #be97c5 100%);
+    margin-bottom: 5px;
+    margin-top: 10px;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    color: black;
+}
+  
+a {
+    color:purple
+}
+.box-form {
+    margin: 10px; /* Remove margin for the box-form div */
+    width: 99%; /* Occupy the full width of the viewport */
+    height: 90vh; /* Occupy the full height of the viewport */
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 6px black;
+}
+
+
+
+.box-form div {
+    height: auto;
+}
+.box-form .left {
+    color: whitesmoke;
+    font-size: 20px;
+    width: 20%;
+    font-weight: bold;
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+}
+.box-form .left .overlay {
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0.90;
+}
+.box-form .left .overlay h2 {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.box-form .left .overlay  p {
+    margin-top: 20px;
+    font-weight: 750;
+}
+
+
+/* customizable snowflake styling */
+.snowflake {
+    color: orangered;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
+
+.box-form .right {
+    width: 80%;
+    overflow: hidden;
+    text-align: center;
+    display: flex; 
+}
+@media (max-width: 980px) {
+    .box-form .right {
+        width: 99%;
+        text-align: center;
+    }
+}
+
+.availability-calendar,
+.available-times {
+    width: 50%; 
+}
+
+/* Style for the availability calendar and available times sections */
+.availability-calendar,
+.available-times {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff; /* Add background color as needed */
+    margin-right: 10px; /* Add margin between the two sections */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a visual separation */
+}
+
+/* Add any specific styles for the Availability Calendar and Available Times sections here */
+.availability-calendar h5,
+.available-times h5 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.box-form .right .availability-calendar .calendrier {
+    width: 100%;
+    height: 90%;
+}
+
+.box-form .right .availability-calendar .calendrier iframe {
+    width: 100%;
+    height: 90%;
+    
+}
+
+.box-form .right .available-times ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.box-form .right .available-times li {
+    background-color: white;
+    border: 2px solid purple;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box-form .right .available-times li:hover {
+    background-color: orangered;
+    color: white; /* Change text color on hover if needed */
+}
+.box-form .right .available-times .spacer {
+    height: 70px;
+  }
+.box-form .right .available-times input {
+    width: 70%;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #B0B3B9;
+}
+.box-form .right .available-times button {
+    float: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    background-color: #6C63FF;
+    transition: background-color 0.3s ease;
+  }
+.box-form .right .available-times button:hover {
+    background-color: purple;
+}
+
+.box-form .right .available-times .message li {
+    background-color: olive;
+    color:white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 980px) {
+    /* Styles for screens with a maximum width of 767 pixels (typical mobile devices) */
+
+    .box-form {
+        flex-direction: column; /* Change to a column layout for smaller screens */
+        width: 90%; /* Adjust the width as needed */
+        
+        margin: 0 auto; /* Center the box-form */
+    }
+
+    .box-form .left,
+    .box-form .right {
+        width: 100%; /* Full width for both left and right sections */
+    }
+
+    .availability-calendar,
+    .available-times {
+        width: 100%; /* Full width for availability calendar and available times */
+        margin-right: 0; /* Remove margin between sections for better mobile layout */
+        margin-bottom: 20px;
+    }
+    .box-form .right .available-times ul {
+        justify-content: center; /* Center the list items for smaller screens */
+    }
+
+    .box-form .right .available-times li {
+        width: 45%; /* Two items in a row for smaller screens */
+    }
+}

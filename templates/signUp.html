@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Book-ESI</title>
+  <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='assets/logo.png') }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div> 
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+
+	<div class="box-form">
+		<!--Partie Gauche-->
+		<div class="leftSignUp">
+			<div class="overlaySignUp">			
+				<h5>Client </h5>				
+				<!-- Add the form here -->
+				<form method="post" action="/client_signup">
+					<div class="inputs">
+						<input type="text" name="username" placeholder="Username">
+						<br>
+						<input type="password" name="password" placeholder="Password">
+						<br>
+						<input type="password" name="confirm_password" placeholder="Confirm Password">
+					</div>
+					<br>				
+					<br>
+					
+					<button type="submit">Sign up</button>
+				</form>
+				<!-- End of the form -->
+			</div>
+		</div>
+		<!--Partie Droite-->
+		<div class="right">			
+			<h5>Provider</h5>
+			<!-- Add the form here -->
+			<form method="post">
+				<div class="inputs">
+					<input type="text" name="username" placeholder="Username" required>
+					<input type="text" name="service_type" placeholder="Service Type">
+					<input type="password" name="password" placeholder="password" required>
+				</div>
+				<br><br>		
+			</form>
+			<div class="spacer"></div>
+			<span>
+				<a href="https://google.achrafsani.xyz/sign_up"><i class="fa fa-google" aria-hidden="true"></i></a>
+			</span>
+			<!-- End of the form -->
+		</div>
+	</div>
+</body>
+</html>
